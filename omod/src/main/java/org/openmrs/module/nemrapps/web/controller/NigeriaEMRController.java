@@ -7,7 +7,7 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.module.nemr.web.controller;
+package org.openmrs.module.nemrapps.web.controller;
 
 import java.util.List;
 
@@ -26,10 +26,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * This class configured as controller using annotation and mapped with the URL of
- * 'module/nemr/nemrLink.form'.
+ * 'module/nemrapps/nemrLink.form'.
  */
 @Controller("${rootrootArtifactId}.NigeriaEMRController")
-@RequestMapping(value = "module/nemr/nemr.form")
+@RequestMapping(value = "module/nemrapps/nemrapps.form")
 public class NigeriaEMRController {
 	
 	/** Logger for this class and subclasses */
@@ -39,7 +39,7 @@ public class NigeriaEMRController {
 	UserService userService;
 	
 	/** Success form view name */
-	private final String VIEW = "/module/nemr/nemr";
+	private final String VIEW = "/module/nemrapps/nemrapps";
 	
 	/**
 	 * Initially called after the getUsers method to get the landing form name

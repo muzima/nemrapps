@@ -9,18 +9,18 @@
     </parent>
 
 	<groupId>org.vumc.module</groupId>
-	<artifactId>nemr</artifactId>
+	<artifactId>nemrapps</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>Nigeria EMR</name>
+	<name>Nigeria EMR Apps</name>
 	<description>Nigeria EMR features</description>
 
 	<url>https://wiki.openmrs.org/x/FQ4z</url>
 
 	<scm>
-		<connection>scm:git:git@github.com:openmrs/openmrs-module-nemr.git</connection>
-		<developerConnection>scm:git:git@github.com:muzima/nemr.git</developerConnection>
-		<url>https://github.com/muzima/nemr</url>
+		<connection>scm:git:git@github.com:openmrs/openmrs-module-nemrapps.git</connection>
+		<developerConnection>scm:git:git@github.com:muzima/nemrapps.git</developerConnection>
+		<url>https://github.com/muzima/nemrapps</url>
 	</scm>
 
 	<modules>
