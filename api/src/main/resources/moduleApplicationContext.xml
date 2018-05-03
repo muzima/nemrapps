@@ -23,18 +23,18 @@
   		    http://www.springframework.org/schema/util
   		    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
-    <!--<context:component-scan base-package="org.openmrs.module.nemr" />-->
+    <!--<context:component-scan base-package="org.openmrs.module.nemrapps" />-->
 
     <!-- Wraps NigeriaEMRService methods in DB transactions and OpenMRS interceptors,
     which set audit info like dateCreated, changedBy, etc.-->
-    <!--<bean id="nemr.NigeriaEMRService"-->
+    <!--<bean id="nemrapps.NigeriaEMRService"-->
             <!--class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">-->
         <!--<property name="transactionManager">-->
             <!--<ref bean="transactionManager" />-->
         <!--</property>-->
         <!--<property name="target">-->
-            <!--<bean class="org.openmrs.module.nemr.api.impl.NigeriaEMRServiceImpl">-->
-                <!--<property name="dao" ref="nemr.NigeriaEMRDao" />-->
+            <!--<bean class="org.openmrs.module.nemrapps.api.impl.NigeriaEMRServiceImpl">-->
+                <!--<property name="dao" ref="nemrapps.NigeriaEMRDao" />-->
             <!--</bean>-->
         <!--</property>-->
         <!--<property name="preInterceptors">-->
@@ -50,8 +50,8 @@
     <!--<bean parent="serviceContext">-->
         <!--<property name="moduleService">-->
             <!--<list>-->
-                <!--<value>org.openmrs.module.nemr.api.NigeriaEMRService</value>-->
-                <!--<ref bean="nemr.NigeriaEMRService" />-->
+                <!--<value>org.openmrs.module.nemrapps.api.NigeriaEMRService</value>-->
+                <!--<ref bean="nemrapps.NigeriaEMRService" />-->
             <!--</list>-->
         <!--</property>-->
     <!--</bean>-->

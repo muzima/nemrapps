@@ -1,4 +1,4 @@
-package org.openmrs.module.nemr.fragment.controller;
+package org.openmrs.module.nemrapps.fragment.controller;
 
 import org.openmrs.module.appframework.context.AppContextModel;
 import org.openmrs.module.appframework.service.AppFrameworkService;

@@ -1,4 +1,4 @@
-package org.openmrs.module.nemr.fragment.controller.patientdashboard;
+package org.openmrs.module.nemrapps.fragment.controller.patientdashboard;
 
 import org.openmrs.Person;
 import org.openmrs.PersonAttribute;

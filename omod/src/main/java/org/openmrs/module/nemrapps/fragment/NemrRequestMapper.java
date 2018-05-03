@@ -1,4 +1,4 @@
-package org.openmrs.module.nemr.fragment;
+package org.openmrs.module.nemrapps.fragment;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -31,7 +31,7 @@ public class NemrRequestMapper implements FragmentRequestMapper {
 		}
 		if (request.getProviderName().equals("coreapps")) {
 			if (request.getFragmentId().equals("patientdashboard/contactInfoInline")) {
-				request.setProviderNameOverride("nemr");
+				request.setProviderNameOverride("nemrapps");
 				log.info("Mapped To: " + request);
 				return true;
 			}

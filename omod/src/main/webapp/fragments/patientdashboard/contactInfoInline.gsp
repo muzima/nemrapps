@@ -10,23 +10,23 @@
         <em>${ ui.message("coreapps.person.telephoneNumber")}</em>
     </span>
     <span class="left-margin">
-        <span id="nemr-alt-phone-numbers">
+        <span id="nemrapps-alt-phone-numbers">
             ${ ui.encodeHtmlContent(config.altPhoneNumbers) }
         </span>
-        <em>${ ui.message("nemr.person.alternativePhoneNumbers")}</em>
+        <em>${ ui.message("nemrapps.patient.otherPhoneNumbers")}</em>
     </span>
     <br/>
     <span>
-        <span id="nemr-neighbor-name">
+        <span id="nemrapps-neighbor-name">
             ${ ui.encodeHtmlContent(config.neighborName) }
         </span>
-        <em>${ ui.message("nemr.person.neighborName")}</em>
+        <em>${ ui.message("nemrapps.patient.personAttribute.closeRelativeName")}</em>
     </span>
     <span class="left-margin">
-        <span id="nemr-neighbor-phone-numbers">
+        <span id="nemrapps-neighbor-phone-numbers">
             ${ ui.encodeHtmlContent(config.neighborPhoneNumbers) }
         </span>
-        <em>${ ui.message("nemr.person.neighborPhoneNumbers")}</em>
+        <em>${ ui.message("nemrapps.person.neighborPhoneNumbers")}</em>
     </span>
     <br/>
     <span>

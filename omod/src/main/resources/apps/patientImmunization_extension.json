@@ -1,0 +1,10 @@
+[
+  {
+    "id": "nemrapps.patientDashboard.patientImmunization",
+    "extensionPointId": "patientDashboard.secondColumnFragments",
+    "extensionParams": {
+      "provider": "nemrapps",
+      "fragment": "patientdashboard/patientImmunization"
+    }
+  }
+]
