@@ -38,66 +38,63 @@
                         }
                     }]
                 },
-                    {
-                        "legend": "Phone Numbers",
-                        "id": "phoneNumberLabel",
-                        "fields": [{
-                            "type": "personAttribute",
-                            "label": "Primary Phone Number",
-                            "formFieldName": "phoneNumber",
-                            "uuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
-                            "widget": {
-                                "providerName": "uicommons",
-                                "fragmentId": "field/text"
-                            },
-                            "cssClasses": ["phone"]
-                        }, {
-                            "type": "personAttribute",
-                            "label": "Alt Phone Numbers",
-                            "formFieldName": "altPhoneNumbers",
-                            "uuid": "4b01cce2-a56b-44ad-b6dd-68cc31127e93",
-                            "widget": {
-                                "providerName": "uicommons",
-                                "fragmentId": "field/text"
-                            }
-                        }, {
-                            "type": "personAttribute",
-                            "label": "Neighbor's Name",
-                            "formFieldName": "neighborName",
-                            "uuid": "12048766-d478-4f31-b9e1-88630198b1c1",
-                            "widget": {
-                                "providerName": "uicommons",
-                                "fragmentId": "field/text"
-                            }
-                        }, {
-                            "type": "personAttribute",
-                            "label": "Neighbor's Phone Numbers",
-                            "formFieldName": "neighborPhoneNumbers",
-                            "uuid": "57963f24-9127-499f-86fe-dd8b87110b19",
-                            "widget": {
-                                "providerName": "uicommons",
-                                "fragmentId": "field/textarea"
-                            }
-                        }]
-                    }
-                ]
-            },
                 {
-                    "id": "relationships-info",
-                    "label": "registrationapp.person.relationship",
-                    "questions": [{
-                        "legend": "registrationapp.person.relationship.label",
-                        "header": "registrationapp.person.relationship.question",
-                        "fields": [{
-                            "type": "personRelationships",
-                            "widget": {
-                                "providerName": "registrationapp",
-                                "fragmentId": "field/personRelationship"
-                            }
-                        }]
+                    "legend": "Phone Numbers",
+                    "id": "phoneNumberLabel",
+                    "fields": [{
+                        "type": "personAttribute",
+                        "label": "Primary Phone Number",
+                        "formFieldName": "phoneNumber",
+                        "uuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
+                        "widget": {
+                            "providerName": "uicommons",
+                            "fragmentId": "field/text"
+                        },
+                        "cssClasses": ["phone"]
+                    }, {
+                        "type": "personAttribute",
+                        "label": "Alt Phone Numbers",
+                        "formFieldName": "altPhoneNumbers",
+                        "uuid": "4b01cce2-a56b-44ad-b6dd-68cc31127e93",
+                        "widget": {
+                            "providerName": "uicommons",
+                            "fragmentId": "field/text"
+                        }
+                    }, {
+                        "type": "personAttribute",
+                        "label": "Other Person's Name",
+                        "formFieldName": "neighborName",
+                        "uuid": "12048766-d478-4f31-b9e1-88630198b1c1",
+                        "widget": {
+                            "providerName": "uicommons",
+                            "fragmentId": "field/text"
+                        }
+                    }, {
+                        "type": "personAttribute",
+                        "label": "Other's Phone Numbers",
+                        "formFieldName": "neighborPhoneNumbers",
+                        "uuid": "57963f24-9127-499f-86fe-dd8b87110b19",
+                        "widget": {
+                            "providerName": "uicommons",
+                            "fragmentId": "field/textarea"
+                        }
                     }]
-                }
-            ]
+                }]
+            }, {
+                "id": "relationships-info",
+                "label": "registrationapp.person.relationship",
+                "questions": [{
+                    "legend": "registrationapp.person.relationship.label",
+                    "header": "registrationapp.person.relationship.question",
+                    "fields": [{
+                        "type": "personRelationships",
+                        "widget": {
+                            "providerName": "registrationapp",
+                            "fragmentId": "field/personRelationship"
+                        }
+                    }]
+                }]
+            }]
         }
     }
 ]
