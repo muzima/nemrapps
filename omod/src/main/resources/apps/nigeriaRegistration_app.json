@@ -25,6 +25,74 @@
         "config": {
             "afterCreatedUrl": "/coreapps/clinicianfacing/patient.page?patientId={{patientId}}",
             "sections": [{
+                "id": "hospitalId",
+                "label": "Hospital IDs",
+                "questions": [{
+                    "legend": "Unit ID",
+                    "fields": [{
+                        "type": "patientIdentifier",
+                        "label": "Unit ID",
+                        "formFieldName": "unitId",
+                        "uuid": "b8f4af99-e057-44c5-bcaa-1c286ee88d66",
+                        "widget": {
+                            "providerName": "uicommons",
+                            "fragmentId": "field/text",
+                            "config": {
+                                "classes": [ "required" ]
+                            }
+                        }
+                    }]
+                }]
+            }, {
+                "id": "otherDemographics",
+                "label": "Other Demographics",
+                "questions": [{
+                    "legend": "Ethnicity/Religion",
+                    "fields": [{
+                        "type": "personAttribute",
+                        "label": "Ethnicity",
+                        "formFieldName": "ethnicity",
+                        "uuid": "b010804e-acbe-4142-83bf-ad24c283d557",
+                        "widget": {
+                            "providerName": "nemrapps",
+                            "fragmentId": "field/dropDownOther",
+                            "config": {
+                                "options": [
+                                    { "label": "Hausa", "value": "Hausa" },
+                                    { "label": "Hausa - Fulani", "value": "Hausa - Fulani" },
+                                    { "label": "Normadic Fulani", "value": "Normadic Fulani" },
+                                    { "label": "Kanuri", "value": "Kanuri" },
+                                    { "label": "Yoruba", "value": "Yoruba" },
+                                    { "label": "Igbo", "value": "Igbo" }
+                                ],
+                                "other": {
+                                    "label": "Other Ethnicity",
+                                    "inputLabel": "Provide Other Ethnicity"
+                                }
+                            }
+                        }
+                    }, {
+                        "type": "personAttribute",
+                        "label": "Religion",
+                        "formFieldName": "religion",
+                        "uuid": "f502804e-4be1-44ea-8ce6-ac851fe5b000",
+                        "widget": {
+                            "providerName": "nemrapps",
+                            "fragmentId": "field/dropDownOther",
+                            "config": {
+                                "options": [
+                                    { "label": "Islam", "value": "Islam" },
+                                    { "label": "Christianity", "value": "Christianity" }
+                                ],
+                                "other": {
+                                    "label": "Other Religion",
+                                    "inputLabel": "Provide Other Religion"
+                                }
+                            }
+                        }
+                    }]
+                }]
+            }, {
                 "id": "contactInfo",
                 "label": "registrationapp.patient.contactInfo.label",
                 "questions": [{
@@ -71,7 +139,7 @@
                         }
                     }, {
                         "type": "personAttribute",
-                        "label": "Other's Phone Numbers",
+                        "label": "Other person's Phone Numbers",
                         "formFieldName": "neighborPhoneNumbers",
                         "uuid": "57963f24-9127-499f-86fe-dd8b87110b19",
                         "widget": {
@@ -91,6 +159,109 @@
                         "widget": {
                             "providerName": "registrationapp",
                             "fragmentId": "field/personRelationship"
+                        }
+                    }]
+                }]
+            }, {
+                "id": "parentalSocialStatus",
+                "label": "Parental Social Status",
+                "questions": [{
+                    "legend": "Father",
+                    "fields": [{
+                        "type": "personAttribute",
+                        "label": "Highest Education Level",
+                        "formFieldName": "fatherEducation",
+                        "uuid": "19f4d331-0230-4fa1-8512-86fb0edde618",
+                        "widget": {
+                            "providerName": "uicommons",
+                            "fragmentId": "field/dropDown",
+                            "config": {
+                                "options": [
+                                    { "label": "None", "value": "None" },
+                                    { "label": "Primary/ Quranic", "value": "Primary/ Quranic" },
+                                    { "label": "Secondary", "value": "Secondary" },
+                                    { "label": "College (Diploma/ NCE)", "value": "College (Diploma/ NCE)" },
+                                    { "label": "University", "value": "University" },
+                                    { "label": "Postgraduate level", "value": "Postgraduate level" }
+                                ]
+                            }
+                        }
+                    }, {
+                        "type": "personAttribute",
+                        "label": "Father's Occupation",
+                        "formFieldName": "fatherOccupation",
+                        "uuid": "ad7926b2-546d-4220-9642-13e4fa3c6363",
+                        "widget": {
+                            "providerName": "uicommons",
+                            "fragmentId": "field/text"
+                        }
+                    }]
+                }, {
+                    "legend": "Mother",
+                    "fields": [{
+                        "type": "personAttribute",
+                        "label": "Highest Education Level",
+                        "formFieldName": "motherEducation",
+                        "uuid": "1c27d249-91e9-4e07-97d1-7561125f7f7d",
+                        "widget": {
+                            "providerName": "uicommons",
+                            "fragmentId": "field/dropDown",
+                            "config": {
+                                "options": [
+                                    { "label": "None", "value": "None" },
+                                    { "label": "Primary/ Quranic", "value": "Primary/ Quranic" },
+                                    { "label": "Secondary", "value": "Secondary" },
+                                    { "label": "College (Diploma/ NCE)", "value": "College (Diploma/ NCE)" },
+                                    { "label": "University", "value": "University" },
+                                    { "label": "Postgraduate level", "value": "Postgraduate level" }
+                                ]
+                            }
+                        }
+                    }]
+                }, {
+                    "legend": "Family Income",
+                    "fields": [{
+                        "type": "personAttribute",
+                        "label": "Approximate Family Income",
+                        "formFieldName": "approximateFamilyIncome",
+                        "uuid": "f72c0279-1fcd-481e-adb3-8bd5b417d36f",
+                        "widget": {
+                            "providerName": "uicommons",
+                            "fragmentId": "field/text",
+                            "config": {
+                                "classes": [ "regex" ],
+                                "regex": "\\d"
+                            }
+                        }
+                    }, {
+                        "type": "personAttribute",
+                        "label": "Number of Children",
+                        "formFieldName": "numberOfChildren",
+                        "uuid": "30e17fcd-ff3f-4ff8-9ed8-ebb9a59e55fc",
+                        "widget": {
+                            "providerName": "uicommons",
+                            "fragmentId": "field/text",
+                            "config": {
+                                "classes": [ "regex", "numeric-range" ],
+                                "regex": "\\d",
+                                "min": 0,
+                                "max": 150
+                            }
+                        }
+                    }, {
+                        "type": "personAttribute",
+                        "label": "Number of Siblings with SCD",
+                        "formFieldName": "numberOfSCDSiblings",
+                        "uuid": "25c3ec34-856c-43bd-963c-23a084821062",
+                        "widget": {
+                            "providerName": "uicommons",
+                            "fragmentId": "field/text",
+                            "config": {
+                                "classes": [ "regex", "numeric-range" ],
+                                "regex": "\\d",
+                                "min": 0,
+                                "max": 150
+                            }
                         }
                     }]
                 }]
