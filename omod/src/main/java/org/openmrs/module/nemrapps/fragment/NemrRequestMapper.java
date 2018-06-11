@@ -36,6 +36,13 @@ public class NemrRequestMapper implements FragmentRequestMapper {
 				return true;
 			}
 		}
+		if (request.getProviderName().equals("coreapps")) {
+			if (request.getFragmentId().equals("patientHeader")) {
+				request.setProviderNameOverride("nemrapps");
+				log.info("Mapped To: " + request);
+				return true;
+			}
+		}
 		return false;
 	}
 	

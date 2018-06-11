@@ -11,6 +11,7 @@ import org.openmrs.ui.framework.annotation.InjectBeans;
 import org.openmrs.ui.framework.fragment.FragmentConfiguration;
 
 public class ContactInfoInlineFragmentController extends org.openmrs.module.coreapps.fragment.controller.patientdashboard.ContactInfoInlineFragmentController {
+	
 	public void controller(FragmentConfiguration config, @InjectBeans PatientDomainWrapper wrapper) {
 		
 		super.controller(config, wrapper);
@@ -19,9 +20,11 @@ public class ContactInfoInlineFragmentController extends org.openmrs.module.core
 		
 		// Get the alternative phone numbers.
 		Person person = ((PatientDomainWrapper) config.get("patient")).getPatient().getPerson();
-		PersonAttributeType altPhonesType = personService.getPersonAttributeTypeByUuid(NemrConstants.ALTERNATIVE_PHONES_UUID);
+		PersonAttributeType altPhonesType = personService
+		        .getPersonAttributeTypeByUuid(NemrConstants.ALTERNATIVE_PHONES_UUID);
 		PersonAttributeType neighborNameType = personService.getPersonAttributeTypeByUuid(NemrConstants.NEIGHBOR_NAME_UUID);
-		PersonAttributeType neighborPhoneNumberType = personService.getPersonAttributeTypeByUuid(NemrConstants.NEIGHBOR_PHONE_NUMBER_UUID);
+		PersonAttributeType neighborPhoneNumberType = personService
+		        .getPersonAttributeTypeByUuid(NemrConstants.NEIGHBOR_PHONE_NUMBER_UUID);
 		
 		PersonAttribute altPhones = altPhonesType == null ? null : person.getAttribute(altPhonesType);
 		PersonAttribute neighborName = neighborNameType == null ? null : person.getAttribute(neighborNameType);

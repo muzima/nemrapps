@@ -111,12 +111,6 @@
                         <%= ui.includeFragment("appui", "extensionPoint", [ id: "patientHeader.editPatientDemographics", contextModel: appContextModel ]) %>
                     </small>
                 </span>
-                <a href="#" id="patient-header-contactInfo" class="contact-info-label">
-                    <span id="coreapps-showContactInfo" class="show">${ui.message("coreapps.patientHeader.showcontactinfo")}</span>
-                    <i class="toggle-icon icon-caret-down small"></i>
-                    <span class="hide">${ui.message("coreapps.patientHeader.hidecontactinfo")}</span>
-                    <i class="toggle-icon icon-caret-up small"></i>
-                </a>
             </span>
 
             <div class="firstLineFragments">
@@ -124,7 +118,51 @@
                 ${ ui.includeFragment(it.extensionParams.provider, it.extensionParams.fragment, [patient: config.patient])}
                 <% } %>
             </div>
+            <div class="contact-info-content contact-info-inline">
+                <span>
+                    <span>${ ui.encodeHtmlContent(config.ethnicity) }</span>
+                    <em>${ ui.message("nemrapps.patient.personAttribute.ethnicity")}</em>
+                </span>
+                <span>
+                    <span>${ ui.encodeHtmlContent(config.religion) }</span>
+                    <em>${ ui.message("nemrapps.patient.personAttribute.religion")}</em>
+                </span>
 
+                <span>
+                    <span>${ ui.encodeHtmlContent(config.fatherEducation) }</span>
+                    <em>${ ui.message("nemrapps.patient.personAttribute.fatherEducation")}</em>
+                </span>
+                <span>
+                    <span>${ ui.encodeHtmlContent(config.fatherOccupation) }</span>
+                    <em>${ ui.message("nemrapps.patient.personAttribute.fatherOccupation")}</em>
+                </span>
+                <span>
+                    <span>${ ui.encodeHtmlContent(config.motherEducation) }</span>
+                    <em>${ ui.message("nemrapps.patient.personAttribute.motherEducation")}</em>
+                </span>
+                <br/>
+
+                <span>
+                    <span>${ ui.encodeHtmlContent(config.numberOfChildren) }</span>
+                    <em>${ ui.message("nemrapps.patient.personAttribute.numberOfChildren")}</em>
+                </span>
+                <span>
+                    <span>${ ui.encodeHtmlContent(config.numberOfSiblingsWithSCD) }</span>
+                    <em>${ ui.message("nemrapps.patient.personAttribute.numberOfSiblingsWithSCD")}</em>
+                </span>
+                <span>
+                    <span>${ ui.encodeHtmlContent(config.familyAnnualIncome) }</span>
+                    <em>${ ui.message("nemrapps.patient.personAttribute.familyAnnualIncome")}</em>
+                </span>
+            </div>
+            <span class="contact-info-content contact-info-inline">
+                <a href="#" id="patient-header-contactInfo" class="contact-info-label">
+                    <span id="coreapps-showContactInfo" class="show">${ui.message("coreapps.patientHeader.showcontactinfo")}</span>
+                    <i class="toggle-icon icon-caret-down small"></i>
+                    <span class="hide">${ui.message("coreapps.patientHeader.hidecontactinfo")}</span>
+                    <i class="toggle-icon icon-caret-up small"></i>
+                </a>
+            </span>
             <div class="hidden" id="contactInfoContent" class="contact-info-content">
                 ${ ui.includeFragment("coreapps", "patientdashboard/contactInfoInline", [ patient: config.patient, contextModel: appContextModel ]) }
             </div>
