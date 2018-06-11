@@ -140,6 +140,10 @@
                     <span>${ ui.encodeHtmlContent(config.motherEducation) }</span>
                     <em>${ ui.message("nemrapps.patient.personAttribute.motherEducation")}</em>
                 </span>
+                <small id="contact-info-inline-edit" class="edit-info" class="left-margin">
+                    <%= ui.includeFragment("appui", "extensionPoint", [ id: "nigeria.patient.editParentalSocialStatus",
+                                                                        contextModel: appContextModel, patientId: config.patientId ]) %>
+                </small>
                 <br/>
 
                 <span>
@@ -177,9 +181,14 @@
         <span>${it.identifier}</span>
         <% } %>
         <br/>
-        <em>${ui.message("nemrapps.patient.patientIdentifier.unitId")}</em>
-        <span> ${ config.unitId } </span>
-        <br/>
+        <% if(config.unitId) { %>
+            <em>${ui.message("nemrapps.patient.patientIdentifier.unitId")}</em>
+            <span><a class="editPatientIdentifier" data-patient-identifier-id="${config.unitId.id}" data-identifier-type-id="${config.unitId.identifierType.id}"
+                     data-identifier-type-name="${config.unitId.identifierType.name}" data-patient-identifier-value="${config.unitId.identifier}"
+                     href="#${config.unitId.identifierType.id}">${ui.encodeHtmlContent(config.unitId.identifier)}</a></span>
+
+            <br/>
+        <% } %>
         <% if (config.extraPatientIdentifierTypes) { %>
 
         <% config.extraPatientIdentifierTypes.each { extraPatientIdentifierType -> %>

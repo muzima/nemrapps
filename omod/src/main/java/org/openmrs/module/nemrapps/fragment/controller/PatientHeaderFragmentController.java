@@ -64,7 +64,7 @@ public class PatientHeaderFragmentController extends org.openmrs.module.coreapps
 		
 		// Get the UNIT ID and add it.
 		PatientIdentifier unitId = patient.getPatientIdentifier(NemrConstants.UNIT_ID_PATIENT_IDENTIFIER_TYPE);
-		config.addAttribute("unitId", unitId == null ? "" : unitId.getIdentifier());
+		config.addAttribute("unitId", unitId);
 	}
 	
 }

@@ -21,6 +21,14 @@
             "url": "registrationapp/editSection.page?patientId={{patient.patientId}}&sectionId=contactInfo&appId=referenceapplication.registrationapp.nigeria",
             "order": 1,
             "requiredPrivilege": "App: registrationapp.registerPatient"
+        }, {
+            "id": "referenceapplication.registrationapp.registerPatient.editParentalSocialStatus",
+            "extensionPointId": "nigeria.patient.editParentalSocialStatus",
+            "type": "link",
+            "label": "Edit Social Info",
+            "url": "registrationapp/editSection.page?patientId={{patient.patientId}}&sectionId=parentalSocialStatus&appId=referenceapplication.registrationapp.nigeria",
+            "order": 1,
+            "requiredPrivilege": "App: registrationapp.registerPatient"
         }],
         "config": {
             "afterCreatedUrl": "/coreapps/clinicianfacing/patient.page?patientId={{patientId}}",
