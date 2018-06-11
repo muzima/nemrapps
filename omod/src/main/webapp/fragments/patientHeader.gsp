@@ -177,6 +177,9 @@
         <span>${it.identifier}</span>
         <% } %>
         <br/>
+        <em>${ui.message("nemrapps.patient.patientIdentifier.unitId")}</em>
+        <span> ${ config.unitId } </span>
+        <br/>
         <% if (config.extraPatientIdentifierTypes) { %>
 
         <% config.extraPatientIdentifierTypes.each { extraPatientIdentifierType -> %>

@@ -1,5 +1,6 @@
 package org.openmrs.module.nemrapps;
 
+import org.openmrs.PatientIdentifierType;
 import org.openmrs.PersonAttributeType;
 import org.openmrs.api.PersonService;
 import org.openmrs.api.context.Context;
@@ -35,8 +36,12 @@ public class NemrConstants {
 	
 	/****************** END OF PERSON ATTRIBUTE TYPES UUIDs *******************************************************/
 	
+	public static final String UNIT_ID_PATIENT_IDENTIFIER_TYPE_UUID = "b8f4af99-e057-44c5-bcaa-1c286ee88d66";
+	
+	public static final PatientIdentifierType UNIT_ID_PATIENT_IDENTIFIER_TYPE;
+	
 	/************************************************************************************************
-	 * PERSON ATTRIBUTE TYPE INSTANCES 																*
+	 * PERSON ATTRIBUTE TYPE INSTANCES *
 	 ************************************************************************************************/
 	public static final PersonAttributeType ETHNICITY;
 	
@@ -64,5 +69,8 @@ public class NemrConstants {
 		FAMILY_ANNUAL_INCOME = personService.getPersonAttributeTypeByUuid(FAMILY_ANNUAL_INCOME_UUID);
 		NUMBER_OF_CHILDREN = personService.getPersonAttributeTypeByUuid(NUMBER_OF_CHILDREN_UUID);
 		NUMBER_OF_SIBLINGS_WITH_SCD = personService.getPersonAttributeTypeByUuid(NUMBER_OF_SIBLINGS_WITH_SCD_UUID);
+		
+		UNIT_ID_PATIENT_IDENTIFIER_TYPE = Context.getPatientService().getPatientIdentifierTypeByUuid(
+		    UNIT_ID_PATIENT_IDENTIFIER_TYPE_UUID);
 	}
 }

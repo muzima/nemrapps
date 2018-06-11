@@ -1,5 +1,7 @@
 package org.openmrs.module.nemrapps.fragment.controller;
 
+import org.openmrs.Patient;
+import org.openmrs.PatientIdentifier;
 import org.openmrs.Person;
 import org.openmrs.PersonAttribute;
 import org.openmrs.module.appframework.context.AppContextModel;
@@ -30,15 +32,16 @@ public class PatientHeaderFragmentController extends org.openmrs.module.coreapps
 	        @SpringBean("baseIdentifierSourceService") IdentifierSourceService identifierSourceService,
 	        @FragmentParam(required = false, value = "appContextModel") AppContextModel appContextModel,
 	        @SpringBean("appFrameworkService") AppFrameworkService appFrameworkService,
-	        @FragmentParam("patient") Object patient, @InjectBeans PatientDomainWrapper wrapper,
+	        @FragmentParam("patient") Object patientObject, @InjectBeans PatientDomainWrapper wrapper,
 	        @SpringBean("adtService") AdtService adtService, UiSessionContext sessionContext, UiUtils uiUtils,
 	        FragmentModel model) {
 		
 		super.controller(config, emrApiProperties, coreAppsProperties, identifierSourceService, appContextModel,
-		    appFrameworkService, patient, wrapper, adtService, sessionContext, uiUtils, model);
+		    appFrameworkService, patientObject, wrapper, adtService, sessionContext, uiUtils, model);
 		
 		// Add required person attribute types.
-		Person person = ((PatientDomainWrapper) config.get("patient")).getPatient().getPerson();
+		Patient patient = ((PatientDomainWrapper) config.get("patient")).getPatient();
+		Person person = patient.getPerson();
 		PersonAttribute ethnicity = person.getAttribute(NemrConstants.ETHNICITY);
 		PersonAttribute religion = person.getAttribute(NemrConstants.RELIGION);
 		PersonAttribute fatherEducation = person.getAttribute(NemrConstants.FATHER_EDUCATION);
@@ -58,6 +61,10 @@ public class PatientHeaderFragmentController extends org.openmrs.module.coreapps
 		config.addAttribute("numberOfChildren", numberOfChildren == null ? "" : numberOfChildren.getValue());
 		config.addAttribute("numberOfSiblingsWithSCD",
 		    numberOfSiblingsWithSCD == null ? "" : numberOfSiblingsWithSCD.getValue());
+		
+		// Get the UNIT ID and add it.
+		PatientIdentifier unitId = patient.getPatientIdentifier(NemrConstants.UNIT_ID_PATIENT_IDENTIFIER_TYPE);
+		config.addAttribute("unitId", unitId == null ? "" : unitId.getIdentifier());
 	}
 	
 }
