@@ -10,7 +10,7 @@
 
 	<groupId>org.vumc.module</groupId>
 	<artifactId>nemrapps</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Nigeria EMR Apps</name>
 	<description>Nigeria EMR features</description>
