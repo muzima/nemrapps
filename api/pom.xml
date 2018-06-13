@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.vumc.module</groupId>
 		<artifactId>nemrapps</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
+		<version>1.0.0</version>
 	</parent>
 
 	<artifactId>nemrapps-api</artifactId>
