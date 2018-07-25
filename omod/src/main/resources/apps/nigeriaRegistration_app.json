@@ -190,7 +190,8 @@
                                     { "label": "Secondary", "value": "Secondary" },
                                     { "label": "College (Diploma/ NCE)", "value": "College (Diploma/ NCE)" },
                                     { "label": "University", "value": "University" },
-                                    { "label": "Postgraduate level", "value": "Postgraduate level" }
+                                    { "label": "Postgraduate level", "value": "Postgraduate level" },
+                                    { "label": "Unknown", "value": "Unknown" }
                                 ]
                             }
                         }
@@ -221,27 +222,15 @@
                                     { "label": "Secondary", "value": "Secondary" },
                                     { "label": "College (Diploma/ NCE)", "value": "College (Diploma/ NCE)" },
                                     { "label": "University", "value": "University" },
-                                    { "label": "Postgraduate level", "value": "Postgraduate level" }
+                                    { "label": "Postgraduate level", "value": "Postgraduate level" },
+                                    { "label": "Unknown", "value": "Unknown" }
                                 ]
                             }
                         }
                     }]
                 }, {
-                    "legend": "Family Income",
+                    "legend": "Children Information",
                     "fields": [{
-                        "type": "personAttribute",
-                        "label": "Approximate Family Income",
-                        "formFieldName": "approximateFamilyIncome",
-                        "uuid": "f72c0279-1fcd-481e-adb3-8bd5b417d36f",
-                        "widget": {
-                            "providerName": "uicommons",
-                            "fragmentId": "field/text",
-                            "config": {
-                                "classes": [ "regex" ],
-                                "regex": "\\d"
-                            }
-                        }
-                    }, {
                         "type": "personAttribute",
                         "label": "Number of Children",
                         "formFieldName": "numberOfChildren",
@@ -269,6 +258,22 @@
                                 "regex": "\\d",
                                 "min": 0,
                                 "max": 150
+                            }
+                        }
+                    }]
+                }, {
+                    "legend": "Family Income",
+                    "fields": [{
+                        "type": "personAttribute",
+                        "label": "Approximate Annual Family Income",
+                        "formFieldName": "approximateFamilyIncome",
+                        "uuid": "f72c0279-1fcd-481e-adb3-8bd5b417d36f",
+                        "widget": {
+                            "providerName": "uicommons",
+                            "fragmentId": "field/text",
+                            "config": {
+                                "classes": [ "regex" ],
+                                "regex": "\\d"
                             }
                         }
                     }]
