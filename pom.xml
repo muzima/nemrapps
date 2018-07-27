@@ -18,7 +18,7 @@
 	<url>https://wiki.openmrs.org/x/FQ4z</url>
 
 	<scm>
-		<connection>scm:git:git@github.com:openmrs/openmrs-module-nemrapps.git</connection>
+		<connection>scm:git:git@github.com:muzima/nemrapps.git</connection>
 		<developerConnection>scm:git:git@github.com:muzima/nemrapps.git</developerConnection>
 		<url>https://github.com/muzima/nemrapps</url>
 	</scm>
