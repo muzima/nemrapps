@@ -7,7 +7,7 @@ import org.openmrs.ui.framework.fragment.FragmentRequestMapper;
 import org.springframework.stereotype.Component;
 
 @Component
-public class NemrRequestMapper implements FragmentRequestMapper {
+public class NemrFragmentRequestMapper implements FragmentRequestMapper {
 	
 	protected final Log log = LogFactory.getLog(getClass());
 	
@@ -16,8 +16,8 @@ public class NemrRequestMapper implements FragmentRequestMapper {
 	 * {@link FragmentRequest#setFragmentIdOverride(String)}, and return true if they want to remap
 	 * a request, or return false if they didn't remap it.
 	 * 
-	 * @param request may have its providerNameOverride and pageNameOverride set
-	 * @return true if this page was mapped (by overriding the provider and/or page), false
+	 * @param request may have its providerNameOverride and fragmentNameOverride set
+	 * @return true if this page was mapped (by overriding the provider and/or frgament), false
 	 *         otherwise
 	 */
 	public boolean mapRequest(FragmentRequest request) {
