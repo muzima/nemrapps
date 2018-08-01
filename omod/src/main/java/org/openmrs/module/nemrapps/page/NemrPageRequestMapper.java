@@ -28,6 +28,13 @@ public class NemrPageRequestMapper implements PageRequestMapper {
 			log.info("Mapped To: " + pageRequest);
 			return true;
 		}
+		
+		if (pageRequest.getProviderName().equals("coreapps")
+		        && pageRequest.getPageName().equals("patientdashboard/patientDashboard")) {
+			pageRequest.setProviderNameOverride("nemrapps");
+			log.info("Mapped To: " + pageRequest);
+			return true;
+		}
 		return false;
 	}
 }
