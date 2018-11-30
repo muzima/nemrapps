@@ -42,12 +42,10 @@
                         "label": "Unit ID",
                         "formFieldName": "unitId",
                         "uuid": "b8f4af99-e057-44c5-bcaa-1c286ee88d66",
+                        "cssClasses": ["required"],
                         "widget": {
                             "providerName": "uicommons",
-                            "fragmentId": "field/text",
-                            "config": {
-                                "classes": [ "required" ]
-                            }
+                            "fragmentId": "field/text"
                         }
                     }]
                 }]
