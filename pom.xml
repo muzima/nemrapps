@@ -9,7 +9,7 @@
 
 	<groupId>org.vumc.module</groupId>
 	<artifactId>nemrapps</artifactId>
-	<version>1.2.1-SNAPSHOT</version>
+	<version>1.3.0</version>
 	<packaging>pom</packaging>
 	<name>Nigeria EMR Apps</name>
 	<description>Nigeria EMR features</description>
@@ -20,7 +20,7 @@
 		<connection>scm:git:git@github.com:muzima/nemrapps.git</connection>
 		<developerConnection>scm:git:git@github.com:muzima/nemrapps.git</developerConnection>
 		<url>https://github.com/muzima/nemrapps</url>
-	  <tag>1.1.0</tag>
+	  <tag>1.3.0</tag>
   </scm>
 
 	<modules>
